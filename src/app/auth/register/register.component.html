@@ -1,0 +1,21 @@
+<section id="login-section">
+    <div class="main-login">   
+        <div class="login-img">
+            <img src="https://images.pexels.com/photos/7614546/pexels-photo-7614546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="interior-design">
+        </div>	
+            <div class="login-lg">
+                <form method="post" action="/auth/register">
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <!-- <input type="text" name="	" placeholder="User name" required=""> -->
+                    <input type="text" name="username" placeholder="Username">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="repass" placeholder="Repat Password">
+                    <button class="button">Sign up</button>
+                    <!-- {{#if error}}
+                        <h1 class="error">{{error}}</h1>
+                        {{/if}} -->
+                </form>
+            <div class="not-for-here"><p>Member?</p><a routerLink="/auth/login">Sign in</a></div>
+        </div>
+    </div>
+</section>
