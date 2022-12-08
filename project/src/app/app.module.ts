@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from './shared/shared.module';
@@ -17,10 +18,11 @@ import { TopBookingsComponent } from './top-bookings/top-bookings.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CoreModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    AuthModule,
+    CoreModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

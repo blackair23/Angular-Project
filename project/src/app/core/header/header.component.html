@@ -1,6 +1,6 @@
 <nav id="nav">
     <!-- {{!-- {{hasUser}} --}} -->
-    <a href="./header.html">
+    <a href="/">
         
         <img class="logo" src="../../../assets/logo.png" alt="logo">
 
@@ -9,7 +9,7 @@
     
 
     <ul class="nav-links-main">
-        <li><a href="./header.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/catalog">Bookings</a></li>
         <!-- {{#if hasUser}} -->
         <li><a href="/create">Create</a></li>
@@ -21,8 +21,8 @@
         <!-- <li>Welcome, someone!</li> 
         <li><a href="/auth/logout">Log out</a></li> -->
         <!-- {{else}} -->
-        <li><a href="./regiter.html">Register</a></li>
-        <li><a href="./login.html">Login</a></li>
+        <li><a routerLink="/auth/register">Register</a></li>
+        <li><a routerLink="/auth/login">Login</a></li>
         <!-- {{/if}} -->
     </ul>
     <i id="hamburger" class="fa-solid fa-bars"></i>
