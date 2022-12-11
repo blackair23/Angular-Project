@@ -3,15 +3,21 @@
         <div class="login-img">
             <img src="https://images.pexels.com/photos/7614546/pexels-photo-7614546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="interior-design">
         </div>	
-        <div class="login-lg">
-            <form method="post" action="/auth/login">
+        <div  class="login-lg" >
+            <form #form="ngForm" (ngSubmit)="loginHandler(form)"> 
                 <label for="chk">Login</label>
-                <input type="text" name="username" placeholder="Username">
-                <input type="password" name="password" placeholder="Password">
+                <input #emailInput="ngModel" type="text" ngModel required email name="email" placeholder="Email">
+                <input  #passwordInput="ngModel" type="password" required [minlength]="5" ngModel name="password" placeholder="Password">
                 <button class="button">Login</button>
-                <!-- {{#if error}}
-                <h1 class="error">{{error}}</h1>
-                {{/if}} -->
+                <ng-container *ngIf="emailInput.touched">
+                    <h1 class="error" *ngIf="emailInput.errors?.['required']">Email is required!</h1>
+                    <h1 class="error" *ngIf="emailInput.errors?.['email']">Email is not valid!</h1>
+                </ng-container>
+                <ng-container *ngIf="passwordInput.touched">
+                    <h1 class="error" *ngIf="passwordInput.errors?.['required']">Password is required!</h1>
+                    <h1 class="error" *ngIf="passwordInput.errors?.['minlength']">Password must be at least 5 characters!</h1>
+                </ng-container>
+                
             </form>
             <div class="not-for-here"><p>Not a member?</p><a routerLink="/auth/register">Sign up</a></div>
             

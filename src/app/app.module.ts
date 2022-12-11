@@ -4,11 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { appInterceptorProvider } from './app.interceptor';
 import { AuthModule } from './auth/auth.module';
+import { CatalogModule } from './catalog/catalog.module';
 import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from './shared/shared.module';
 import { TopBookingsComponent } from './top-bookings/top-bookings.component';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { TopBookingsComponent } from './top-bookings/top-bookings.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CoreModule,
     HttpClientModule,
     SharedModule,
     AuthModule,
+    CoreModule,
+    CatalogModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    appInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

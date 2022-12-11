@@ -1,16 +1,12 @@
-#login-section{
+#sign-section{
 	margin: 0;
 	padding: 3em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* min-height: 100vh; */
-	/* font-family: 'Comfortaa', sans-serif; */
-	/* background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); */
+
 }
-.main-login{
-    /* font-family: 'Comfortaa', sans-serif; */
-	/* width: 350px; */
+.main-sign{
 	height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -20,48 +16,34 @@
 	box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.205);
     
 }
-.main-login .login-img{
+.main-sign .sign-img{
     display: flex; 
     object-fit:cover;
     object-position: bottom;
     width: 300px;
     overflow: hidden;
 }
-.main-login .login-img img{
-    /* display: flex; */
+.main-sign .sign-img img{
     object-fit:cover;
     object-position: bottom;
-    /* width: 100%; */
-    /* display: none; */
 }
 #chk{
-    /* font-family: 'Comfortaa', sans-serif; */
 	display: none;
 }
 .signup{
-    /* font-family: 'Comfortaa', sans-serif; */
 	position: relative;
 	width:100%;
 	height: 100%;
 }
 
-.login-lg label{
-    /* font-family: 'Comfortaa', sans-serif; */
-	color: #505366;
-    padding: 20px;
-	font-size: 2.3em;
-	justify-content: center;
-	display: flex;
-	margin: 60px;
-	font-weight: bold;
-}
+
 
 .signup label{
 	color: #505366;
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
-	margin: 60px;
+	margin: 40px;
 	font-weight: bold;
 }
 .signup input{
@@ -96,38 +78,10 @@
 	justify-content: center;
 	display: block;
 	cursor: pointer;
-}
- .login-lg button{
-	width: 60%;
 	height: 40px;
-	margin: 10px auto;
-	justify-content: center;
-	display: block;
-	cursor: pointer; 
-}
-
-
-.login-lg .button{
-    font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
     font-weight: 700;
 }
-
-/* .heading{
-	text-align: center;
-	margin: 1.5em;
-	color: #0087ca;
-	font-size: 1.8em;
-} */
-
-/* #chk:checked ~ .login-lg{
-	transform: translateY(-500px);
-} */
-/* #chk:checked ~ .login-lg label{
-	transform: scale(1);	
-} */
-/* #chk:checked ~ .signup label{
-	transform: scale(.6);
-} */
 
 .not-for-here{
     display: flex;
@@ -143,14 +97,14 @@
 
 
 @media only screen and (max-width: 800px) {
-    .main-login{
+    .main-sign{
         display: flex;
         width: 350px;
         height: 500px;
         /* align-items: center; */
         justify-content: center;
     }
-    .main-login .login-img{
+    .main-sign .sign-img{
         display: none;
     }
 }

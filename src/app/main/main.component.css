@@ -1,4 +1,18 @@
-
+.container{
+    display: block;
+    /* display: table; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* min-height: 100%; */
+    /* justify-content: center; */
+    /* width: 100%; */
+    /* align-content: center; */
+    /* justify-items: center; */
+    /* width: 100%; */
+    /* height: max-content; */
+    /* padding-bottom: 10%; */
+    /* border: 2px solid black; */
+}
 .hero-img{
     position: relative;
     margin-top: 0;
@@ -7,12 +21,20 @@
     height: 500px;
     border-radius: 60px;
     margin-top: 0;
+   
+    /* border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    justify-items: center; */
 }
 
 .hero-img img {
     object-fit: cover;
     object-position: top;
     width: 100%;
+    /* height: 100%; */
     z-index: -1;
     border-radius: 25px;
 }
@@ -118,31 +140,20 @@ input:focus{
     align-content: center;
     padding: 30px 10%;
 }
-.catalog-listings{
-    display: grid;
-    grid-template-columns: 300px  300px 300px;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    justify-items: space-between;
-    width: 100%;
-}
 
-
-@media only screen and (max-width: 1230px) {
-    .catalog-listings{
-        display: grid;
-        grid-template-columns: 300px  300px ;
-    }
-}
 
 @media only screen and (max-width: 1080px) {
+    .hero-text{
+        font-size: 1.5em;
+    }
+
     .searchForm{
         display: block;
         font-size: 90%;
         padding: 0;
+        padding-top: 2%;
     }
-    .frost{
+    .hero-img .frost{
         padding: 0;
         margin: 0;
     }    
@@ -158,14 +169,21 @@ input:focus{
     }
     .hero-title-brake h1{
         margin-top: 23%;
-        font-size: 2em;
-    }
-}
-@media only screen and (max-width: 840px) {
-    .catalog-listings{
-        display: grid;
-        grid-template-columns: 300px ;
-        justify-content: center;
+        font-size: 2em; 
     }
 }
 
+@media only screen and (max-width: 550px) {
+    .hero-text{
+        font-size: 0.9em;
+    }
+
+    .hero-img{
+        margin: 0; 
+        border-radius: 0;
+    }
+    
+    .hero-img img {
+        border-radius: 0;
+    }
+}

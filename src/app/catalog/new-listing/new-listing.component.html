@@ -1,0 +1,60 @@
+<section id="create-section">
+    <div class="main-create">  
+        <div class="login-lg">
+            <form #form="ngForm"  (ngSubmit)="createHandler(form)">
+                <label for="chk" aria-hidden="true">Create listing</label>
+                <div class="upload-photo">
+
+                    <h3>Upload photo</h3>
+                    <input ngModel required #selectFile="ngModel" type="file" name="imgFile" (change)="onFileSelected($event)">
+                </div>
+                <input ngModel required type="text" #titleInput="ngModel"  name="title"  placeholder="Title" >
+                <input ngModel required type="number" #priceInput="ngModel"  name="price" placeholder="Price per night">
+                <input ngModel required type="text" #locationInput="ngModel"  name="location" placeholder="Location">
+                <input ngModel required [minlength]="10"  #descripInput="ngModel" type="text" name="description" placeholder="Description">
+                <h3>Amenities</h3>
+                <div class="grid-list">
+                    <input ngModel #service1="ngModel"  type="text" name="service1" placeholder="e.g. 24/7 Wifi">
+                    <input ngModel #service2="ngModel" type="text" name="service2" placeholder="e.g. 24/7 Wifi">
+                    <input ngModel #service3="ngModel" type="text" name="service3" placeholder="e.g. 24/7 Wifi">
+                    <input ngModel #service4="ngModel" type="text" name="service4" placeholder="e.g. 24/7 Wifi">
+                </div>
+                <button class="button">Create</button>
+            </form>
+        </div>
+        
+        <div class="catalog-listings">
+            <div class="brForLogo"></div>
+            <div class="vision">
+                <h1 id="h1">Preview</h1>
+                <div class="list">
+                    <img [src]="listing.imgFile|| 'https://images.pexels.com/photos/803975/pexels-photo-803975.jpeg?auto=compress&cs=tinysrgb&w=600'" alt="productImage">
+                    <div id="inside-grid">
+                        <div>
+                        <h1>{{titleInput.value || 'Cabin'}} </h1>
+                        <p>{{locationInput.value || 'Paris'}}</p>
+                        </div> 
+                        <div class="price">
+                            <h1>{{priceInput.value || '10'}}EUR</h1>
+                        </div>
+                    </div>
+                    <div class="catalogBrake"></div>
+                    <p>Available dates</p>
+                    <!-- <a href="/catalog/123"></a> -->
+
+                    <!-- || "https://images.pexels.com/photos/803975/pexels-photo-803975.jpeg?auto=compress&cs=tinysrgb&w=600" -->
+                </div>
+                <h3 class="error" *ngIf="selectFile.errors?.['required'] && selectFile?.touched">Picture is required!</h3>
+                <h3 class="error" *ngIf="titleInput.errors?.['required'] && titleInput?.touched">Title is required!</h3>
+                <h3 class="error" *ngIf="priceInput.errors?.['required'] && priceInput?.touched">Price is required!</h3>
+                <h3 class="error" *ngIf="locationInput.errors?.['required'] && locationInput?.touched">Location is required!</h3>
+                <ng-container *ngIf="descripInput.touched">
+                    <h3 class="error" *ngIf="descripInput.errors?.['required']" >Description is required!</h3>
+                    <h3 class="error" *ngIf="descripInput.errors?.['minlength']">Description must be at least 10 characters!</h3>
+                </ng-container>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>

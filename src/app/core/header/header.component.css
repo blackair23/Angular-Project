@@ -75,3 +75,40 @@ nav{
     color: #dd5d5a;
     font-weight: 700;
 }
+
+@media only screen and (max-device-width: 1080px) {
+    nav{
+        padding: 10px 1%;
+        }
+}
+
+@media only screen and (max-width: 800px) {
+    nav{
+        padding: 10px 1%;
+        
+        height:  4em;
+    }
+
+    #hamburger{
+        display: block;
+        margin-right: 4em;
+    }
+    .nav-links-main li a, .nav-links-users li a{
+        /* color: rgb(105, 105, 105); */
+        font-size: 0.8em;
+        display: none;
+        /* display: inline-block;
+        position: relative; */
+    }
+    .brForLogo {
+        display: none;
+    }
+    .logo{
+        cursor: pointer;
+        height: 3em;
+        margin: 1em;
+        padding: 10px;
+    }
+
+
+}
