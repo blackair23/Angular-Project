@@ -4,19 +4,28 @@
     border-color: aqua;
     stroke-dasharray: 2132;
     animation: 3s fillSvg ease-in-out infinite;
+    /* max-width: 50px; */
+    /* width: 50%; */
+    transform: scale(0.5); 
 }
 
 #scaffold{
     display: flex;
     position: absolute;
     z-index: -1;
-    margin-left: 15px;
-    margin-top: 15px;
-    
+    /* margin-left: px; */
+    /* padding-left: 10px; */
+    /* margin-top: 15px; */
+    /* width: 50%; */
+    /* max-height: 50px; */
+    transform: scale(0.5); 
 }
 #loader{
     display: flex;
-
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 2px solid black;
 }
 
 @keyframes fillSvg {
