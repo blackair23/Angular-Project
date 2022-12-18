@@ -1,0 +1,78 @@
+
+<div class="container">
+    <!-- <div class="hero-img">
+        <img src="https://images.pexels.com/photos/8112856/pexels-photo-8112856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="cabin">
+        <div class="hero-text">
+            <h1 class="hero-title">Air, sleep, dream</h1>
+            <p class="hero-p">Find and book a great experience.</p>
+            <a *ngIf="!user" class="hero-btn button" routerLink="/auth/login">Search</a>
+        </div>
+        <div *ngIf="user" class="frost">
+            <form class="searchForm" action="">
+                <div class="ha" id="location">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <div>
+                    <input type="search" name="city" placeholder="Location">
+                    <p>Were are you going?</p>
+                    </div>
+                </div>
+                <div class="ha">
+                <input type="date" name="checkIn" placeholder="Check in">
+                <p>Add date</p>
+                </div>
+                <div class="ha">
+                <input type="date" name="checkOut" placeholder="Check out">
+                <p>Add date</p>
+                </div>
+                <div class="ha">
+                <button class="button" type="submit">Search
+                </button>
+            </div>
+            </form>   
+        </div> 
+    </div> -->
+    <div class="card">
+        <img src="../../../assets/user.png" alt="John" style="width:100%">
+      <h1>{{user.username}}</h1>
+      <p class="title">Email: {{user.email}}</p>
+      <p>Listed properties: {{listings.length}}</p>
+      <!--   <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a> -->
+        <p><button>Contact</button></p>
+      </div>
+    
+    <div class="hero-title-brake">
+        <h1>Find your listing</h1>
+    </div>
+    
+    </div>
+    
+    <div id="nedded">
+            <!-- ----------------------- -->
+            <div class="catalog-listings">
+                <div *ngFor="let list of listings" class="list">
+                    <a routerLink="/catalog/detail/{{list._id}}">
+                    <img [src]="list.imgFile" alt="productImage">
+                    <div id="inside-grid">
+                        <div>
+                        <h1>{{list.title}}</h1>
+                        <p>{{list.location}}</p>
+                        </div> 
+                        <div class="price">
+                
+                            <h1 *ngIf="user" >{{list.price}}EUR </h1>
+                
+                        </div>
+                    </div>
+                    <div class="catalogBrake">
+                    </div>
+                    <p *ngIf="user">20.10 - 25.10</p>
+                    <p *ngIf="!user">Available dates</p>
+                    </a>
+                </div>
+                </div>
+            <!-- ----------------------- -->
+    </div>
+

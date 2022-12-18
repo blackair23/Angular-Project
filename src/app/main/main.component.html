@@ -4,9 +4,9 @@
     <div class="hero-text">
         <h1 class="hero-title">Air, sleep, dream</h1>
         <p class="hero-p">Find and book a great experience.</p>
-        <a class="hero-btn button" href="javascrip:void[0]">Search</a>
+        <a *ngIf="!user" class="hero-btn button" routerLink="/auth/login">Search</a>
     </div>
-    <div class="frost">
+    <div *ngIf="user" class="frost">
         <form class="searchForm" action="">
             <div class="ha" id="location">
                 <i class="fa-sharp fa-solid fa-location-dot"></i>

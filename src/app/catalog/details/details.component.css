@@ -14,6 +14,27 @@
     touch-action: manipulation;
     text-shadow: none;
     margin-top: 1em;
+}
+  .buttonEd{
+    width: 50%;
+  }
+  .buttonDel{
+    background: rgb(193, 52, 47);
+    border: 0;
+    border-radius: 60px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    outline: transparent;
+    /* padding: 0 1rem; */
+    padding: 1% 2%;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .1s ease-in-out;
+    touch-action: manipulation;
+    text-shadow: none;
+    margin-top: 0.5em;
+    width: 50%;
   }
 
 .detail-header {

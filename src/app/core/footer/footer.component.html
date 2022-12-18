@@ -8,15 +8,18 @@
     </div>
     <div class="footer-links">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/catalog">Rentals</a></li>
-            <li><a href="/create">Create</a></li>
-            <li><a href="/auth/logout">Logout</a></li>
-            
-            <li><a href="/auth/register">Register</a></li>
-            <li><a href="/auth/login">Login</a></li>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/catalog">Bookings</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <ng-container *ngIf="user">
+            <li><a routerLink="/catalog/create">Create</a></li>
+            <li><a routerLink="/auth/logout">Logout</a></li>
+            </ng-container>
+            <ng-container *ngIf="!user">
+            <li><a routerLink="/auth/login">Login</a></li>
+            <li><a routerLink="/auth/register">Register</a></li>
+            </ng-container>
 
-            <li><a href="/about">About</a></li>
         </ul>
     </div>
     <div class="copy">

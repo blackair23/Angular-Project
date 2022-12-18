@@ -61,7 +61,7 @@ nav{
     border-radius: 60px;
     bottom: 0;
     left: 0;
-    background-color: #dd5d5a;
+    background-color: #2fc0a0;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -69,10 +69,10 @@ nav{
 .nav-links-main li a:hover:after , .nav-links-users li a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-    color: #dd5d5a;
+    color: #2fc0a0;
 }
 .nav-links-main li a:hover , .nav-links-users li a:hover {
-    color: #dd5d5a;
+    color: #2fc0a0;
     font-weight: 700;
 }
 

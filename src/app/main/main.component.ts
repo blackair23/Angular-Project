@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-main',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  get user() {
+    return JSON.parse(sessionStorage.getItem('userData') as string)
+  }
+  constructor(private authService: AuthService) { 
+    
+  }
 
   ngOnInit(): void {
   }

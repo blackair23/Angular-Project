@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from './shared/shared.module';
 import { TopBookingsComponent } from './top-bookings/top-bookings.component';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { TopBookingsComponent } from './top-bookings/top-bookings.component';
     AppComponent,
     MainComponent,
     TopBookingsComponent,
+    AuthenticateComponent,
   ],
   imports: [
     BrowserModule,

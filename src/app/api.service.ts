@@ -12,6 +12,6 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   loadTopBookings() {
-    return this.httpClient.get(`${apiURL}/data/catalog`);
+    return this.httpClient.get(`/data/catalog`);
   }
 }

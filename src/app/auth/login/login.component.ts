@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent {
 
-  constructor(private authService: AuthService, private router: Router) {  
+  constructor(private activatedRoute: ActivatedRoute, private authService: AuthService, private router: Router) {  
     
   }
 
@@ -19,10 +19,16 @@ export class LoginComponent {
     console.log(form.value);
     const { email, password } = form.value;
     this.authService.login(email!, password!).subscribe(user => {
+      // this.authService.user = user;
       console.log('>>>',user);
       sessionStorage.setItem("userData",JSON.stringify(user));
+      // this.authService.
       this.router.navigate(['/'])
     });
+
+    // const returnUrl =this.activatedRoute.snapshot.queryParams['returnUrl'] || '/';
+
+    // this.router.navigate([returnUrl]);
   };
 
 }

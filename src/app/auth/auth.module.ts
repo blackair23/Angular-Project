@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LogoutComponent } from './logout/logout.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -14,6 +15,7 @@ import { SharedModule } from '../shared/shared.module';
     LoginComponent,
     RegisterComponent,
     LogoutComponent,
+    ProfileComponent,
   ],
   imports: [
     CommonModule,

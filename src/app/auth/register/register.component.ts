@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { sameValueGroupValidator } from 'src/app/shared/validator';
 import { AuthService } from '../auth.service';
 
@@ -23,18 +23,24 @@ export class RegisterComponent {
 
   })
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   registerHandler(){
     if(this.form.invalid) {return;}
     console.log(this.form.value);
     const {username, email, passwords: {password} = {} } = this.form.value;
+
     this.authService.register(username!, email!, password!).subscribe(user => {
-      this.authService.user;
+      // this.authService.user = user;
       console.log('>>>',user);
       sessionStorage.setItem("userData",JSON.stringify(user));
       this.router.navigate(['/'])
     });
+
+    const returnUrl =this.activatedRoute.snapshot.queryParams['returnUrl'] || '/';
+
+    this.router.navigate([returnUrl]);
+
   }
 
 
