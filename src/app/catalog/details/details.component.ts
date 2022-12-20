@@ -21,26 +21,26 @@ export class DetailsComponent implements OnInit {
   }
 
   owner: boolean | undefined | null;
-  deleteListing(){
-    let token = this.authService.token;
-    if(token !== null){
-      // let id = token._id;
-      const headers = new HttpHeaders({
-        'Content-Type': 'application/json',
-        'X-Authorization': `${token.accessToken}`,
-      });  
-      const requestOptions = { headers: headers };
-      const id = this.activatedRoute.snapshot.paramMap.get('id');
-      this.catalogService.deleteList( id!, requestOptions ).subscribe(()=> {
-      this.router.navigate(['/catalog']);
-    })
-  } else{
-  }
-  //   const id = this.activatedRoute.snapshot.paramMap.get('id');
-  //   this.catalogService.deleteList(id!, ).subscribe(() => {
+  // deleteListing(){
+  //   let token = this.authService.token;
+  //   if(token !== null){
+  //     // let id = token._id;
+  //     const headers = new HttpHeaders({
+  //       'Content-Type': 'application/json',
+  //       'X-Authorization': `${token.accessToken}`,
+  //     });  
+  //     const requestOptions = { headers: headers };
+  //     const id = this.activatedRoute.snapshot.paramMap.get('id');
+  //     this.catalogService.deleteList( id!, requestOptions ).subscribe(()=> {
   //     this.router.navigate(['/catalog']);
-  //  })
-  }
+  //   })
+  // } else{
+  // }
+  // //   const id = this.activatedRoute.snapshot.paramMap.get('id');
+  // //   this.catalogService.deleteList(id!, ).subscribe(() => {
+  // //     this.router.navigate(['/catalog']);
+  // //  })
+  // }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get('id');

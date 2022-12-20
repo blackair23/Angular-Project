@@ -27,7 +27,7 @@
     display: inline-block;
     outline: transparent;
     /* padding: 0 1rem; */
-    padding: 1% 2%;
+    padding: 10% 20%;
     text-align: center;
     text-decoration: none;
     transition: box-shadow .1s ease-in-out;
@@ -35,6 +35,7 @@
     text-shadow: none;
     margin-top: 0.5em;
     width: 50%;
+    border: 2px solid black;
   }
 
 .detail-header {

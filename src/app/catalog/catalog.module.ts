@@ -7,6 +7,8 @@ import { DetailsComponent } from './details/details.component';
 import { AllListingsComponent } from './all-listings/all-listings.component';
 import { AuthModule } from '../auth/auth.module';
 import { EditComponent } from './edit/edit.component';
+import { BookingComponent } from './booking/booking.component';
+import { CommentComponent } from './comment/comment.component';
 
 
 
@@ -15,7 +17,9 @@ import { EditComponent } from './edit/edit.component';
     NewListingComponent,
     DetailsComponent,
     AllListingsComponent,
-    EditComponent
+    EditComponent,
+    BookingComponent,
+    CommentComponent
   ],
   imports: [
     CommonModule,

@@ -1,3 +1,5 @@
+import { IBook } from "./book";
+import { IComment } from "./comment";
 import { IUser } from "./user";
 
 export interface IListing{
@@ -11,4 +13,7 @@ export interface IListing{
     service3: string,
     service4: string,
     _ownerId: IUser,
+    bookings: IBook,
+    bookUserId: string,
+    comments: IComment
 }

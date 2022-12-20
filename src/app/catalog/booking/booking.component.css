@@ -1,0 +1,96 @@
+.reserve{
+    border: 1px solid rgba(105, 105, 105, 0.158);
+    border-radius: 20px;
+    padding:  5%;
+    max-width: 400px;
+    height: fit-content;
+    padding-top: 7%;
+    padding-bottom: 8%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.10), 0 10px 10px  rgba(0, 0, 0, 0.10);
+}
+
+.reserve .button{
+    /* background-color: yellow; */
+    background: rgb(47, 193, 161);
+    margin-bottom: 2em;
+    font-size: 120%;
+    padding: 3%;
+    width: 100%;
+
+    
+}
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.grid-list2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5%;
+    margin: 7% 0 2% 0;
+  }
+
+  .charge p{
+    margin: 3% 0 3% 10%;
+}
+.charge h3{
+    margin: 0% 0 0% 10%;
+}
+
+.charge .float-right{
+    margin-left: auto; 
+    margin-right: 15%;
+}
+
+.catalogBrake{ 
+    border-bottom: 1px solid rgba(105, 105, 105, 0.5);;
+    margin-top:10px;
+    margin-bottom:10px;
+    width: 95%;
+    margin-left: 2.5%;
+    
+}
+
+.buttonEd{
+    margin-bottom: 2em;
+    margin-top: 2em;
+    background: rgb(47, 193, 161);
+    border: 0;
+    border-radius: 60px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    outline: transparent;
+    /* padding: 0 1rem; */
+    padding: 3% 1%;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .1s ease-in-out;
+    touch-action: manipulation;
+    text-shadow: none;
+    margin-top: 0.5em;
+    width: 40%;
+  }
+  .buttonDel{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: rgb(193, 52, 47);
+    border: 0;
+    border-radius: 60px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    outline: transparent;
+    /* padding: 0 1rem; */
+    padding: 3% 1%;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .1s ease-in-out;
+    touch-action: manipulation;
+    text-shadow: none;
+    margin-top: 0.5em;
+    width: 40%;
+    margin-left: 10%;
+    /* border: 2px solid black; */
+  }

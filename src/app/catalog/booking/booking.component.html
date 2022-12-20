@@ -1,0 +1,38 @@
+<div class="reserve">
+<h1>{{list.price}}EUR / night</h1>
+    <form  *ngIf="!owner" class="grid-list2" #form="ngForm" (ngSubmit)="bookListing(form)">
+        <label for="checkIn">Check in</label>
+        <label for="checkOut">Check Out</label>
+        <input #startDate="ngModel" type="date" ngModel required name="startDate" placeholder="Check in">
+        <input #endDate="ngModel" type="date"  ngModel required name="endDate" placeholder="Check out">
+        <h3 class="error" *ngIf="startDate.errors?.['required'] && startDate?.touched">ChekIn date  is required!</h3>
+        <!-- <input ngModel required type="date" #endDate="ngModel"  name="checkOut" placeholder="Check out"> -->
+        <h3 class="error" *ngIf="endDate.errors?.['required'] && endDate?.touched">CheckOut date is required!</h3>
+        <button *ngIf="!owner && !booked" class="button">
+            <!-- <a *ngIf="!owner"(click)="bookListing()" routerLink="data/catalog/{{list._id}}/book" class="button">Reserve</a> -->
+            Reserve
+        </button>
+
+
+       
+        
+    </form>
+    <a *ngIf="owner" routerLink="/catalog/edit/{{list._id}}" class="buttonEd">Edit</a>
+    <a *ngIf="owner" (click)="deleteListing()" routerLink="/catalog/delete/{{list._id}}" class="buttonDel">Delete</a>
+
+        
+    <div *ngIf="!booked" class="charge grid-list">
+        <p>Nights</p>  <p class="float-right">600EUR</p>
+        <p>Taxes</p>  <p class="float-right">200EUR</p>
+        <!-- <div class="catalogBrake"></div> -->
+        <!-- <div></div> -->
+    </div>
+    <div *ngIf="booked">
+        <h1>Already Booked!</h1>
+    </div>
+    <div class="catalogBrake"></div>
+    <div *ngIf="!booked" class="charge grid-list">
+    <h3>Total</h3> <h3 class="float-right">620EUR</h3>
+    </div>
+
+</div>

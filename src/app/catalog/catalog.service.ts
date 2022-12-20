@@ -17,7 +17,7 @@ export class CatalogService {
     return this.http.get<IListing[]>(url);
   }
   
-  addListing(  value: any, headers: object ) {
+  addListing( value: any, headers: object ) {
     console.log('value', value.title);
     // console.log('value V', Object.values(value));
     console.log('headers ', headers);
@@ -37,5 +37,9 @@ export class CatalogService {
 
   deleteList(id: string, headers: object) {
     return this.http.delete<IListing>('/data/catalog/' + id , headers);
+  }
+
+  bookList(id: string, value: string, headers: object) {
+    return this.http.post(`/data/catalog/${id}/book` , value, headers);
   }
 }
