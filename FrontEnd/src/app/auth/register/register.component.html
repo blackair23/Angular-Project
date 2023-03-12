@@ -1,0 +1,39 @@
+<section id="sign-section">
+    <div class="main-sign">   
+        <div class="sign-img">
+            <img src="https://images.pexels.com/photos/7614546/pexels-photo-7614546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="interior-design">
+        </div>	
+            <div class="signup">
+                <form [formGroup]="form" (ngSubmit)="registerHandler()">
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <input formControlName="username" type="text" name="username" placeholder="Username">
+                    <input formControlName="email" type="text" name="email" placeholder="Email">
+                    <ng-container formGroupName="passwords">
+                    <input formControlName="password" type="password" name="password" placeholder="Password">
+                    <input formControlName="rePass" type="password" name="repass" placeholder="Repat Password">
+                    </ng-container>
+                    <button class="button">Sign up</button>
+                    <!-- {{form.value | json}}
+                    {{form.get('passwords')?.errors | json}} -->
+                    <ng-container *ngIf="form.get('passwords')?.get('password')?.touched">
+                        <h1 *ngIf="form.get('passwords')?.get('password')?.errors?.['required']" class="error">Password is required!</h1>
+                        <h1 *ngIf="form.get('passwords')?.get('password')?.errors?.['minlength']" class="error">Password sould be at least 5 characters!</h1>
+                    </ng-container>
+                    <ng-container *ngIf="form.get('passwords')?.get('rePass')?.touched">
+                        <h1 *ngIf="form.get('passwords')?.get('rePass')?.errors?.['required']" class="error">Repeat password is required!</h1>
+                        <h1 *ngIf="form.get('passwords')?.errors?.['sameValueGroupValidator']" class="error">Passwords don't match</h1>
+                    </ng-container>
+
+                    <ng-container *ngIf="form.get('email')?.touched">
+                        <h1 *ngIf="form.get('email')?.errors?.['required']" class="error">Email is required!</h1>
+                        <h1 *ngIf="form.get('email')?.errors?.['email']" class="error">Email is not valid!</h1>
+                    </ng-container>
+
+                    <h1 *ngIf="form.get('username')?.errors?.['required'] && form.get('username')?.touched" class="error">Username is required!</h1>
+                    <h1 *ngIf="form.get('username')?.errors?.['minlength'] && form.get('username')?.touched" class="error">Username sould be at least 3 characters!</h1>
+
+                </form>
+            <div class="not-for-here"><p>Member?</p><a routerLink="/auth/login">Sign in</a></div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+<div class="container">
+<div class="hero-img">
+    <img src="https://images.pexels.com/photos/8112856/pexels-photo-8112856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="cabin">
+    <div class="hero-text">
+        <h1 class="hero-title">Air, sleep, dream</h1>
+        <p class="hero-p">Find and book a great experience.</p>
+        <a *ngIf="!user" class="hero-btn button" routerLink="/auth/login">Search</a>
+    </div>
+    <div *ngIf="user" class="frost">
+        <form class="searchForm" action="">
+            <div class="ha" id="location">
+                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                <div>
+                <input type="search" name="city" placeholder="Location">
+                <p>Were are you going?</p>
+                </div>
+            </div>
+            <div class="ha">
+            <input type="date" name="checkIn" placeholder="Check in">
+            <p>Add date</p>
+            </div>
+            <div class="ha">
+            <input type="date" name="checkOut" placeholder="Check out">
+            <p>Add date</p>
+            </div>
+            <div class="ha">
+            <button class="button" type="submit">Search
+            </button>
+        </div>
+        </form>   
+    </div> 
+</div>
+
+<div class="hero-title-brake">
+    <h1>Let's go on an adventure</h1>
+    <p>Find and book a great experience.</p>
+</div>
+
+</div>
+
+<div id="nedded">
+    
+        <app-top-bookings></app-top-bookings>
+    <!-- </div> -->
+</div>

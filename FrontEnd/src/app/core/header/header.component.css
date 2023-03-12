@@ -1,0 +1,114 @@
+.brForLogo {
+    /* display: flex; */
+    border-left: 1px solid rgba(105, 105, 105, 0.5);
+    height: 2.5em;
+    /* float: left; */
+    /* position: absolute; */
+    /* left: 50%; */
+    /* margin-left: 0; */
+    /* top: 0; */
+}
+
+li a {
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    height:  4em;
+    margin-bottom: 0;
+}
+#hamburger{
+    display: none;
+}
+
+.logo{
+    cursor: pointer;
+    height: 4em;
+    margin: 1em;
+    padding: 10px;
+}
+
+.nav-links-main, .nav-links-users{
+    list-style: none;
+}
+
+.nav-links-main li, .nav-links-users li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links-main li, .nav-links-users li{
+    color: rgb(105, 105, 105);
+}
+.nav-links-main li a, .nav-links-users li a{
+    color: rgb(105, 105, 105);
+    font-size: 1.1em;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-links-main li a:after, .nav-links-users li a:after{
+    font-size: 1.1em; 
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.6px;
+    border-radius: 60px;
+    bottom: 0;
+    left: 0;
+    background-color: #2fc0a0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-links-main li a:hover:after , .nav-links-users li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: #2fc0a0;
+}
+.nav-links-main li a:hover , .nav-links-users li a:hover {
+    color: #2fc0a0;
+    font-weight: 700;
+}
+
+@media only screen and (max-device-width: 1080px) {
+    nav{
+        padding: 10px 1%;
+        }
+}
+
+@media only screen and (max-width: 800px) {
+    nav{
+        padding: 10px 1%;
+        
+        height:  4em;
+    }
+
+    #hamburger{
+        display: block;
+        margin-right: 4em;
+    }
+    .nav-links-main li a, .nav-links-users li a{
+        /* color: rgb(105, 105, 105); */
+        font-size: 0.8em;
+        display: none;
+        /* display: inline-block;
+        position: relative; */
+    }
+    .brForLogo {
+        display: none;
+    }
+    .logo{
+        cursor: pointer;
+        height: 3em;
+        margin: 1em;
+        padding: 10px;
+    }
+
+
+}

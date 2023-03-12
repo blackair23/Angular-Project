@@ -1,0 +1,30 @@
+<footer>
+    <div class="footerBrake"></div>
+    <div class="social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+    <div class="footer-links">
+        <ul>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/catalog">Bookings</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <ng-container *ngIf="user">
+            <li><a routerLink="/catalog/create">Create</a></li>
+            <li><a routerLink="/auth/logout">Logout</a></li>
+            </ng-container>
+            <ng-container *ngIf="!user">
+            <li><a routerLink="/auth/login">Login</a></li>
+            <li><a routerLink="/auth/register">Register</a></li>
+            </ng-container>
+
+        </ul>
+    </div>
+    <div class="copy">
+        <img src="../../../assets/logo.png" alt="logo">
+        <p> Copyright &copy; bookMe, inc.</p>
+    </div>
+
+</footer>
