@@ -1,27 +1,63 @@
-# Project
+# BookME 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+BookME is a web application for hotel listings and booking, inspired by Airbnb. This application is built with the MEAN stack, which consists of MongoDB, Express, Angular, and Node.js. Non-registered users can view the home page and catalog, but cannot see property details or make bookings. Registered users can list properties, book properties, and write reviews.
 
-## Development server
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/95815081/224548931-650f252e-0be2-4d3f-8052-67530888be80.png" />
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+To get started with BookME, you will need to have Node.js, Angular CLI, and MongoDB installed on your computer. You can install Node.js from the official website, and Angular CLI can be installed via npm using the following command:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`npm install -g @angular/cli`
 
-## Build
+You can download and install MongoDB from the official website, or use a cloud-based MongoDB service such as MongoDB Atlas.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+After installing the necessary software, you can clone this repository and install the dependencies:
 
-## Running unit tests
+`git clone https://github.com/blackair23/Angular-Project.git`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`cd Angular-Project`
 
-## Running end-to-end tests
+`npm install`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Running the App
 
-## Further help
+To run the application, you will need to start both the front-end and back-end servers. In one terminal window, navigate to the /FrontEnd directory and run the following command:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`ng serve`
+
+This will start the Angular development server and make the application available at http://localhost:4200.
+
+In another terminal window, navigate to the /RestApi directory and run the following command:
+
+`npm start`
+
+This will start the Node.js/Express server and connect to the MongoDB database. The server will be available at http://localhost:3030.
+
+## Features
+
+### Non-Registered Users
+
+   - View home page and catalog
+   - Cannot see property details or make booking
+   
+### Registered Users
+
+   - Register and login
+   - List properties
+   - Book properties
+   - Write reviews
+   
+## Technologies Used
+
+   - Angular: Front-end framework
+   - Node.js/Express: Back-end framework
+   - MongoDB: Database
+   - Multer: File uploading
+   
+   
+   
+   
+   
